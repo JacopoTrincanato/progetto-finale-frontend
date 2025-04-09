@@ -9,6 +9,10 @@ body {
   color: #343a40;
 }
 
+img {
+  width: 100%;
+}
+
 header {
   background-color: #212529;
 }

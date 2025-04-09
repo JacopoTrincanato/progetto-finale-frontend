@@ -30,6 +30,9 @@ export default function CarDetails() {
     //faccio la chiamata solo al caricamento del componente
     useEffect(fetchData, []);
 
+    console.log(car);
+
+
     return (
         <>
 
@@ -42,18 +45,25 @@ export default function CarDetails() {
                 <img src={car.urlImage} className="w-50" />
                 <div className="car-informations-top">
                     <h3 className="mb-3">Description: {car.description}</h3>
-                    <div unless="${car.getOptionals().size() > 0}">
-                        {car.optionals ?
+                    <div>
 
+
+                        {car.optionals?.length > 0 ? (
                             <div>
                                 <h3>Optionals:</h3>
-                                <h3>{car.optionals}</h3>
-                            </div> :
-
+                                <ul>
+                                    {car.optionals.map((optional) => (
+                                        <li key={optional.id}>
+                                            <strong>{optional.name}</strong>: {optional.description}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ) : (
                             <div className="alert alert-warning">
                                 <h3>This car hasn't got optionals</h3>
                             </div>
-                        }
+                        )}
 
                     </div>
 
