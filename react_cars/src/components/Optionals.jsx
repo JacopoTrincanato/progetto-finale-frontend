@@ -20,7 +20,7 @@ export default function Optionals({ optionals }) {
 
     return (
         <>
-            <section className="optionals mx-auto mt-5 border border-lighter rounded p-4">
+            <section className="optionals mx-auto mt-5 rounded p-4">
 
                 <h2 className="text-center">Optionals:</h2>
 
@@ -29,7 +29,7 @@ export default function Optionals({ optionals }) {
 
                         {optionals.map((optional, index) => (
                             <div key={optional.id} className="accordion-item col-md-3">
-                                <button onClick={handleClick} data-index={index} className="btn btn-light mb-3">
+                                <button onClick={handleClick} data-index={index} className="btn btn-light my-3">
                                     {optional.name}
                                 </button>
 

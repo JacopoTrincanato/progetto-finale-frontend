@@ -3,6 +3,7 @@ export default function CarInformationBottom({ model, price, numberOfDoors, prod
     return (
         <>
             <section className="car-informations-bottom mx-auto mt-5">
+                <h2 className="text-center mb-3">Other Details</h2>
                 <div className="row d-flex justify-content-around border border-lighter rounded p-2">
                     <div className="col-md-4">
                         <div className="text-center">
