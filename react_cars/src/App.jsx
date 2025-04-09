@@ -7,7 +7,7 @@ import Cars from './pages/Cars';
 function App() {
 
   //creo la costante per l'url dell'API
-  const apiUrl = import.meta.env.API_URL;
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   return (
     <>
