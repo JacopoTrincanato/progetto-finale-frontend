@@ -11,9 +11,6 @@ export default function AppHeader() {
                             <li className="nav-item">
                                 <NavLink to='/' className="nav-link">Cars</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink to='/optionals' className="nav-link">Optionals</NavLink>
-                            </li>
                         </ul>
                     </div>
                 </div>

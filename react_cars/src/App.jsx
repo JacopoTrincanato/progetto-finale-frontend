@@ -3,6 +3,7 @@ import './App.css'
 import GlobalContext from './contexts/GlobalContext'
 import DefaultLayout from './layout/DefaultLayout';
 import Cars from './pages/Cars';
+import CarDetails from './pages/CarDetails';
 
 function App() {
 
@@ -15,8 +16,11 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>
-              <Route path='/' element={<Cars />} />
-              <Route path='/optionals' />
+
+              <Route path='/'>
+                <Route index element={<Cars />} />
+                <Route path=':id' element={<CarDetails />} />
+              </Route>
             </Route>
           </Routes>
         </BrowserRouter>

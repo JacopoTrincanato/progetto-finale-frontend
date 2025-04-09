@@ -8,7 +8,7 @@ export default function DefaultLayout() {
 
             <AppHeader />
 
-            <main>
+            <main className="p-3">
                 <Outlet />
             </main>
         </>

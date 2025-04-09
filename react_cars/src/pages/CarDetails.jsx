@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import GlobalContext from "../contexts/GlobalContext";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 export default function CarDetails() {
 
@@ -46,7 +47,7 @@ export default function CarDetails() {
 
                             <div>
                                 <h3>Optionals:</h3>
-                                <h3 each="optional : *{optionals}">{car.optionals}</h3>
+                                <h3>{car.optionals}</h3>
                             </div> :
 
                             <div className="alert alert-warning">
@@ -65,31 +66,31 @@ export default function CarDetails() {
                     <div className="col-md-4">
                         <div className="text-center">
                             <p>Model:</p>
-                            <h3 className="mb-3">[[*{model}]]</h3>
+                            <h3 className="mb-3">{car.model}</h3>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="text-center">
                             <p>Price:</p>
-                            <h3 className="mb-3">[[*{price}]] &euro;</h3>
+                            <h3 className="mb-3">{car.price} &euro;</h3>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="text-center">
                             <p>Number of doors:</p>
-                            <h3 className="mb-3">[[*{numberOfDoors}]]</h3>
+                            <h3 className="mb-3">{car.numberOfDoors}</h3>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="text-center">
                             <p>Production date:</p>
-                            <h3 className="mb-3">[[*{productionDate}]]</h3>
+                            <h3 className="mb-3">{car.productionDate}</h3>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="text-center">
                             <p>Fuel Type:</p>
-                            <h3 className="mb-3">[[*{fuelType}]]</h3>
+                            <h3 className="mb-3">{car.fuelType}</h3>
                         </div>
                     </div>
                 </div>
