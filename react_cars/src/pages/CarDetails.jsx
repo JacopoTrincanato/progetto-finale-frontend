@@ -47,7 +47,7 @@ export default function CarDetails() {
             <Optionals optionals={car.optionals} />
 
             {/*Car Information Bottom */}
-            <CarInformationBottom model={car.model} price={car.price} numberOfDoors={car.numberOfDoors} productionDate={car.productionDate} fuelType={car.fuelType} />
+            <CarInformationBottom model={car.model} price={car.price} numberOfDoors={car.numberOfDoors} productionDate={car.productionDate} fuelType={car.fuelType} color={car.color} />
 
 
         </div>

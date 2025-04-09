@@ -1,4 +1,4 @@
-export default function CarInformationBottom({ model, price, numberOfDoors, productionDate, fuelType }) {
+export default function CarInformationBottom({ model, price, numberOfDoors, productionDate, fuelType, color }) {
 
     return (
         <>
@@ -32,6 +32,12 @@ export default function CarInformationBottom({ model, price, numberOfDoors, prod
                         <div className="text-center">
                             <p>Fuel Type:</p>
                             <h3 className="mb-3">{fuelType}</h3>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="text-center">
+                            <p>Color:</p>
+                            <h3 className="mb-3">{color}</h3>
                         </div>
                     </div>
                 </div>
