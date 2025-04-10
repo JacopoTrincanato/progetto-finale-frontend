@@ -34,14 +34,14 @@ export default function Cars() {
             </div>
 
             <div className="container mt-4">
-                <div className="row g-4 d-flex justify-content-between">
-                    <div className="row g-4 d-flex justify-content-between">
-                        {cars && cars.map(car => (
-                            <div className="col-sm-6 col-md-4" key={car.id}>
-                                <CarCard car={car} />
-                            </div>
-                        ))}
-                    </div>
+                <div className="row g-4 d-flex justify-content-center">
+
+                    {cars && cars.map(car => (
+                        <div className="col-12 col-sm-6 col-md-4" key={car.id}>
+                            <CarCard car={car} />
+                        </div>
+                    ))}
+
                 </div>
             </div>
 
