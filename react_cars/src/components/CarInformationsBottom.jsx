@@ -1,5 +1,8 @@
 export default function CarInformationBottom({ model, price, numberOfDoors, productionDate, fuelType, color }) {
 
+    //formattazione data
+    const dateOfProduction = new Date(productionDate).toLocaleDateString("it-IT");
+
     return (
         <>
             <section className="car-informations-bottom mx-auto mt-5">
@@ -26,7 +29,7 @@ export default function CarInformationBottom({ model, price, numberOfDoors, prod
                     <div className="col-md-4">
                         <div className="text-center">
                             <p>Production date:</p>
-                            <h3 className="mb-3">{productionDate}</h3>
+                            <h3 className="mb-3">{dateOfProduction}</h3>
                         </div>
                     </div>
                     <div className="col-md-4">
