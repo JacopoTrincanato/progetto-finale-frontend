@@ -19,32 +19,30 @@ export default function Optionals({ optionals }) {
     }
 
     return (
-        <>
-            <section className="optionals mx-auto mt-5 rounded p-4">
+        <section className="mt-5 p-4 bg-light rounded shadow">
+            <h2 className="text-center mb-4">Optionals</h2>
 
-                <h2 className="text-center">Optionals:</h2>
-
-                {optionals?.length > 0 ? (
-                    <div className="row d-flex justify-content-around p-2">
-
-                        {optionals.map((optional, index) => (
-                            <div key={optional.id} className="accordion-item col-md-3">
-                                <button onClick={handleClick} data-index={index} className="btn btn-light my-3">
-                                    {optional.name}
-                                </button>
-
-                                <h6 className={active != index ? 'hide' : ''}>{optional.description}</h6>
+            {optionals?.length > 0 ? (
+                <div className="row g-3">
+                    {optionals.map((optional, index) => (
+                        <div key={optional.id} className="col-md-4">
+                            <div className="card h-100">
+                                <div className="card-body text-center">
+                                    <button onClick={handleClick} data-index={index} className="btn btn-primary w-100 mb-3">
+                                        {optional.name}
+                                    </button>
+                                    <p className={active != index ? 'hide' : ''}>{optional.description}</p>
+                                </div>
                             </div>
-                        ))}
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <div className="alert alert-warning text-center">
+                    <h5>This car hasn't got optionals</h5>
+                </div>
+            )}
+        </section>
+    );
 
-                    </div>
-                ) : (
-                    <div className="alert alert-warning">
-                        <h3>This car hasn't got optionals</h3>
-                    </div>
-                )}
-
-            </section>
-        </>
-    )
 }
