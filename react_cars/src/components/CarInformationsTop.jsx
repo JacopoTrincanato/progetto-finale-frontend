@@ -6,16 +6,15 @@ export default function CarInformationsTop({ urlImage, description }) {
     const navigate = useNavigate();
 
     return (
-        <>
-            <section className="m-auto mt-5 d-flex gap-3 border border-lighter p-4 rounded">
-
-                <img src={urlImage} className="w-50" />
-                <div className="car-informations-top">
-                    <h3 className="mb-3">Description: {description}</h3>
-                    <button onClick={() => navigate(-1)} className="btn btn-light mt-3">Back to cars page</button>
-                </div>
-
-            </section>
-        </>
-    )
+        <section className="row align-items-center mb-5">
+            <div className="col-md-6">
+                <img src={urlImage} className="img-fluid rounded shadow" alt="Car" />
+            </div>
+            <div className="col-md-6">
+                <h3 className="mb-4">Description</h3>
+                <p className="lead">{description}</p>
+                <button onClick={() => navigate(-1)} className="btn btn-outline-secondary mt-3">Back to cars page</button>
+            </div>
+        </section>
+    );
 }
